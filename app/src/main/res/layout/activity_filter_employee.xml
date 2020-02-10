@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FilterEmployeeActivity">
+
+    <TextView
+        android:id="@+id/tvDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a Department"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Spinner
+        android:id="@+id/snrDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDepartment"
+        app:layout_constraintEnd_toEndOf="@id/tvDepartment" />
+
+    <Button
+        android:id="@+id/btnDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Department"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/snrDepartment"
+        app:layout_constraintEnd_toEndOf="@id/snrDepartment" />
+
+    <Button
+        android:id="@+id/btnGoToNewEmployee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Employee"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@id/btnDepartment"
+        app:layout_constraintEnd_toEndOf="@id/btnDepartment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

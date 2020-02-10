@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateEmployeeActivity">
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName"
+        app:layout_constraintEnd_toEndOf="@+id/etFirstName"/>
+
+    <EditText
+        android:id="@+id/etStreet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Street Address"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etLastName"
+        app:layout_constraintEnd_toEndOf="@+id/etLastName"/>
+
+    <EditText
+        android:id="@+id/etCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etStreet"
+        app:layout_constraintEnd_toEndOf="@+id/etStreet"/>
+
+    <EditText
+        android:id="@+id/etState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="State"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etCity"
+        app:layout_constraintEnd_toEndOf="@+id/etCity"/>
+
+    <EditText
+        android:id="@+id/etZip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zip Code"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etState"
+        app:layout_constraintEnd_toEndOf="@+id/etState"/>
+
+    <EditText
+        android:id="@+id/etTaxID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tax ID"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etZip"
+        app:layout_constraintEnd_toEndOf="@+id/etZip"/>
+
+    <EditText
+        android:id="@+id/etPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Position"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etTaxID"
+        app:layout_constraintEnd_toEndOf="@+id/etTaxID"/>
+
+    <EditText
+        android:id="@+id/etDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Department"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etPosition"
+        app:layout_constraintEnd_toEndOf="@+id/etPosition"/>
+
+    <Button
+        android:id="@+id/btnUpdateEmployeeOnList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Employee on LIST"
+        android:onClick="onClick"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/etDepartment"
+        app:layout_constraintEnd_toEndOf="@+id/etDepartment"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
