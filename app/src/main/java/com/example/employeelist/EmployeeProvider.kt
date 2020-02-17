@@ -72,7 +72,7 @@ class EmployeeProvider : ContentProvider() {
                 returnCursor = database.query(
                     TABLE_NAME,
                     projection,
-                    selection,
+                    "$COL_DEPARTMENT = ?",
                     selectionArgs,
                     null,
                     null,
