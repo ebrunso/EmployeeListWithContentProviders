@@ -113,4 +113,47 @@ class EmployeeDatabaseHelper(context : Context)
         database.delete(TABLE_NAME, "$COL_TAXID = ?", arrayOf(taxID))
         database.close()
     }
+
+    fun getAllDepartmentsFromDatabase() : ArrayList<String> {
+        val database = readableDatabase
+        var departmentList : ArrayList<String> = ArrayList<String>()
+        val cursor = database.rawQuery("SELECT $COL_DEPARTMENT FROM $TABLE_NAME", null)
+
+        if(cursor.moveToNext()) {
+            do{
+                val dept = cursor.getString(cursor.getColumnIndex(COL_DEPARTMENT))
+                departmentList.add(dept)
+            } while(cursor.moveToNext())
+        }
+        cursor.close()
+        database.close()
+        return departmentList
+    }
+
+    fun getAllDatabaseObjectsFromDatabase(departmentName: String) : ArrayList<Employee> {
+        val database = readableDatabase
+        var employeeList : ArrayList<Employee> = ArrayList<Employee>()
+        val cursor = database.rawQuery("SELECT * FROM $TABLE_NAME WHERE $COL_DEPARTMENT = '$departmentName'", null)
+
+        if(cursor.moveToFirst()) {
+            do {
+                val firstName = cursor.getString(cursor.getColumnIndex(COL_FIRST_NAME))
+                val lastName = cursor.getString(cursor.getColumnIndex(COL_LAST_NAME))
+                val streetAddress = cursor.getString(cursor.getColumnIndex(COL_STREET_ADDRESS))
+                val city = cursor.getString(cursor.getColumnIndex(COL_CITY))
+                val state = cursor.getString(cursor.getColumnIndex(COL_STATE))
+                val zip = cursor.getString(cursor.getColumnIndex(COL_ZIP))
+                val taxID = cursor.getString(cursor.getColumnIndex(COL_TAXID))
+                val position = cursor.getString(cursor.getColumnIndex(COL_POSITION))
+                val department = cursor.getString(cursor.getColumnIndex(COL_DEPARTMENT))
+                val employee = Employee(firstName, lastName, streetAddress, city,
+                    state, zip, taxID, position, department)
+                employeeList.add(employee)
+            } while(cursor.moveToNext())
+        }
+
+        cursor.close()
+        database.close()
+        return employeeList
+    }
 }

@@ -29,8 +29,9 @@ class NewEmployeeActivity : AppCompatActivity() {
                 val department = etDepartment.text.toString()
                 databaseHelper.insertEmployeeIntoDatabase(Employee(firstName, lastName,
                     streetAddress, city, state, zip, taxID, position, department))
-                Toast.makeText(this@NewEmployeeActivity,
+                var toast = Toast.makeText(this@NewEmployeeActivity,
                     "New Employee entered into database!", Toast.LENGTH_LONG)
+                toast.show()
             }
         }
     }

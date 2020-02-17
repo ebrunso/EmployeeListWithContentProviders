@@ -8,10 +8,20 @@ import kotlinx.android.synthetic.main.activity_update_employee.*
 
 class UpdateEmployeeActivity : AppCompatActivity() {
 
+    val passedEmployee by lazy{intent?.getParcelableExtra<Employee>("employee")}
     val databaseHelper by lazy{ EmployeeDatabaseHelper(this)}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_employee)
+        etFirstName.setText(passedEmployee?.firstName)
+        etLastName.setText(passedEmployee?.lastName)
+        etStreet.setText(passedEmployee?.streetAddress)
+        etCity.setText(passedEmployee?.city)
+        etState.setText(passedEmployee?.state)
+        etZip.setText(passedEmployee?.zip)
+        etTaxID.setText(passedEmployee?.taxID)
+        etPosition.setText(passedEmployee?.position)
+        etDepartment.setText(passedEmployee?.department)
     }
 
     fun onClick(view: View) {

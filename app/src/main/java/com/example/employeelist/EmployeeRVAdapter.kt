@@ -1,5 +1,6 @@
 package com.example.employeelist
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,14 +26,19 @@ class EmployeeRVAdapter(var employeeList : ArrayList<Employee>, val callback: Em
         fun populateEmployeeItem(employee : Employee) {
             itemView.tvFirstName.text = employee.firstName
             itemView.tvLastName.text = employee.lastName
-            itemView.tvStreet.text = employee.streetAddress
-            itemView.tvCity.text = employee.city
-            itemView.tvState.text = employee.state
-            itemView.tvZip.text = employee.zip
-            itemView.tvTaxID.text = employee.taxID
-            itemView.tvPosition.text = employee.position
-            itemView.tvDepartment.text = employee.department
-            itemView.setOnClickListener{ callback.passEmployee(employee)}
+            //itemView.tvStreet.text = employee.streetAddress
+            //itemView.tvCity.text = employee.city
+            //itemView.tvState.text = employee.state
+            //itemView.tvZip.text = employee.zip
+           //itemView.tvTaxID.text = employee.taxID
+            //itemView.tvPosition.text = employee.position
+            //itemView.tvDepartment.text = employee.department
+            itemView.setOnClickListener {
+                val intent = Intent(it.context, EmployeeDescription::class.java)
+                intent.putExtra("employee", employee)
+                it.context.startActivity(intent)
+            }
+                //callback.passEmployee(employee)}
         }
     }
 

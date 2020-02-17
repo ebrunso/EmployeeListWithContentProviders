@@ -1,15 +1,9 @@
 package com.example.employeelist
 
-// 1. FirstName
-//    2. LastName
-//    3. StreetAddress
-//    4. City
-//    5. State
-//    6. Zip
-//    7. TaxID
-//    8. Position
-//    9. Department
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Employee(
     var firstName : String,
     var lastName : String,
@@ -19,4 +13,4 @@ data class Employee(
     var zip : String,
     var taxID : String,
     var position : String,
-    var department : String)
+    var department : String) : Parcelable

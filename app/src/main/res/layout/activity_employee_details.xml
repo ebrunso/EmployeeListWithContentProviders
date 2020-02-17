@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".EmployeeDetailsActivity">
 
     <TextView
@@ -25,87 +25,67 @@
         app:layout_constraintTop_toBottomOf="@+id/tvFirstName"
         app:layout_constraintEnd_toEndOf="@+id/tvFirstName"/>
 
-    <TextView
-        android:id="@+id/tvStreet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Street Address"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvLastName"
-        app:layout_constraintEnd_toEndOf="@+id/tvLastName"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvStreet"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Street Address"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvLastName"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvLastName"/>-->
 
-    <TextView
-        android:id="@+id/tvCity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="City"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvStreet"
-        app:layout_constraintEnd_toEndOf="@+id/tvStreet"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvCity"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="City"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvStreet"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvStreet"/>-->
 
-    <TextView
-        android:id="@+id/tvState"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="State"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvCity"
-        app:layout_constraintEnd_toEndOf="@+id/tvCity"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvState"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="State"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvCity"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvCity"/>-->
 
-    <TextView
-        android:id="@+id/tvZip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Zip Code"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvState"
-        app:layout_constraintEnd_toEndOf="@+id/tvState"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvZip"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Zip Code"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvState"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvState"/>-->
 
-    <TextView
-        android:id="@+id/tvTaxID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tax ID"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvZip"
-        app:layout_constraintEnd_toEndOf="@+id/tvZip"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvTaxID"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Tax ID"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvZip"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvZip"/>-->
 
-    <TextView
-        android:id="@+id/tvPosition"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Position"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvTaxID"
-        app:layout_constraintEnd_toEndOf="@+id/tvTaxID"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvPosition"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Position"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTaxID"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvTaxID"/>-->
 
-    <TextView
-        android:id="@+id/tvDepartment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Department"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvPosition"
-        app:layout_constraintEnd_toEndOf="@+id/tvPosition"/>
-
-    <Button
-        android:id="@+id/btnUpdateEmployeeOnList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update Employee on LIST"
-        android:onClick="onClick"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvDepartment"
-        app:layout_constraintEnd_toEndOf="@+id/tvDepartment"/>
-
-    <Button
-        android:id="@+id/btnDeleteEmployeeOnList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete Employee on LIST"
-        android:onClick="onClick"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdateEmployeeOnList"
-        app:layout_constraintEnd_toEndOf="@+id/btnUpdateEmployeeOnList"/>
+<!--    <TextView-->
+<!--        android:id="@+id/tvDepartment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Department"-->
+<!--        android:layout_margin="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvPosition"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tvPosition"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

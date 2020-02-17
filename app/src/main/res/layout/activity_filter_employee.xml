@@ -32,14 +32,4 @@
         app:layout_constraintTop_toBottomOf="@id/snrDepartment"
         app:layout_constraintEnd_toEndOf="@id/snrDepartment" />
 
-    <Button
-        android:id="@+id/btnGoToNewEmployee"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="New Employee"
-        android:onClick="onClick"
-        app:layout_constraintTop_toBottomOf="@id/btnDepartment"
-        app:layout_constraintEnd_toEndOf="@id/btnDepartment" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
