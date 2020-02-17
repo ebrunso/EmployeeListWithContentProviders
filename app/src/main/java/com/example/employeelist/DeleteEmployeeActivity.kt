@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_delete_employee.*
 
 class DeleteEmployeeActivity : AppCompatActivity() {
 
+    val passedEmployee by lazy {intent?.getParcelableExtra<Employee>("employee")}
     val databaseHelper by lazy{ EmployeeDatabaseHelper(this)}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +21,8 @@ class DeleteEmployeeActivity : AppCompatActivity() {
                 Toast.makeText(this@DeleteEmployeeActivity,
                     "Employee deleted from database!", Toast.LENGTH_LONG)
                 val taxID = etTaxID.text.toString()
-                databaseHelper.removeEmployeeFromDatabase(taxID)
+                //databaseHelper.removeEmployeeFromDatabase(taxID)
+                contentResolver.delete(CONTENT_URI, passedEmployee?.taxID.toString(), null)
             }
         }
     }

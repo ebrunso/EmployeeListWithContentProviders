@@ -1,5 +1,6 @@
 package com.example.employeelist
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,17 +19,18 @@ class NewEmployeeActivity : AppCompatActivity() {
     fun onClick(view: View) {
         when (view.id) {
             R.id.btnAddEmployeeToList -> {
-                val firstName = etFirstName.text.toString()
-                val lastName = etLastName.text.toString()
-                val streetAddress = etStreet.text.toString()
-                val city = etCity.text.toString()
-                val state = etState.text.toString()
-                val zip = etZip.text.toString()
-                val taxID = etTaxID.text.toString()
-                val position = etPosition.text.toString()
-                val department = etDepartment.text.toString()
-                databaseHelper.insertEmployeeIntoDatabase(Employee(firstName, lastName,
-                    streetAddress, city, state, zip, taxID, position, department))
+                var newVals = ContentValues().apply{
+                    put(COL_FIRST_NAME, etFirstName.text.toString())
+                    put(COL_LAST_NAME, etLastName.text.toString())
+                    put(COL_STREET_ADDRESS, etStreet.text.toString())
+                    put(COL_CITY, etCity.text.toString())
+                    put(COL_STATE, etState.text.toString())
+                    put(COL_ZIP, etZip.text.toString())
+                    put(COL_TAXID, etTaxID.text.toString())
+                    put(COL_POSITION, etPosition.text.toString())
+                    put(COL_DEPARTMENT, etDepartment.text.toString())
+                }
+                contentResolver.insert(CONTENT_URI, newVals)
                 var toast = Toast.makeText(this@NewEmployeeActivity,
                     "New Employee entered into database!", Toast.LENGTH_LONG)
                 toast.show()
